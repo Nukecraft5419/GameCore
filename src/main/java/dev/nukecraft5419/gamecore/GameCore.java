@@ -13,12 +13,12 @@ import dev.nukecraft5419.gamecore.config.Configuration;
 import dev.nukecraft5419.gamecore.i18n.LanguageManager;
 import dev.nukecraft5419.gamecore.listeners.PlayerJoinListener;
 import dev.nukecraft5419.gamecore.listeners.PlayerQuitListener;
-import dev.nukecraft5419.gamecore.players.AdvancedPlayerManager;
+import dev.nukecraft5419.gamecore.players.GamePlayerManager;
 
 public class GameCore extends JavaPlugin {
     private ConfigManager configManager;
     private LanguageManager languageManager;
-    private AdvancedPlayerManager playerManager;
+    private GamePlayerManager playerManager;
 
     private void addCommand(CommandListener command) {
         command.register(this, false);
@@ -41,7 +41,7 @@ public class GameCore extends JavaPlugin {
         // Instantiate managers.
         this.configManager = new ConfigManager(this);
         this.languageManager = new LanguageManager(this);
-        this.playerManager = new AdvancedPlayerManager(this);
+        this.playerManager = new GamePlayerManager(this);
 
         // Load data.
         this.languageManager.loadLanguagesSafe();
@@ -65,7 +65,7 @@ public class GameCore extends JavaPlugin {
         return this.languageManager;
     }
 
-    public AdvancedPlayerManager getPlayerManager() {
+    public GamePlayerManager getPlayerManager() {
         return this.playerManager;
     }
 

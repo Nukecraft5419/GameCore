@@ -5,7 +5,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 
 import dev.nukecraft5419.gamecore.GameCore;
-import dev.nukecraft5419.gamecore.players.AdvancedPlayer;
+import dev.nukecraft5419.gamecore.players.GamePlayer;
 
 public class PlayerJoinListener implements Listener {
   private GameCore plugin;
@@ -16,7 +16,7 @@ public class PlayerJoinListener implements Listener {
 
   @EventHandler
   public void onPlayerJoin(PlayerJoinEvent e) {
-    AdvancedPlayer player = this.plugin.getPlayerManager().addPlayer(e.getPlayer());
+    GamePlayer player = this.plugin.getPlayerManager().addPlayer(e.getPlayer());
     player.download();
   }
 }

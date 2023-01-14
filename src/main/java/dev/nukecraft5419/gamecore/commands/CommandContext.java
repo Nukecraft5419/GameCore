@@ -9,7 +9,7 @@ import dev.nukecraft5419.gamecore.errors.MaterialNotFoundException;
 import dev.nukecraft5419.gamecore.errors.PlayerOfflineException;
 import dev.nukecraft5419.gamecore.errors.SoundNotFoundException;
 import dev.nukecraft5419.gamecore.errors.WorldNotFoundException;
-import dev.nukecraft5419.gamecore.players.AdvancedPlayer;
+import dev.nukecraft5419.gamecore.players.GamePlayer;
 
 public class CommandContext {
     private GameCore plugin;
@@ -40,8 +40,8 @@ public class CommandContext {
         return this.executor;
     }
 
-    public AdvancedPlayer getPlayer() {
-        return (AdvancedPlayer) this.executor;
+    public GamePlayer getPlayer() {
+        return (GamePlayer) this.executor;
     }
 
     public boolean isPlayer() {

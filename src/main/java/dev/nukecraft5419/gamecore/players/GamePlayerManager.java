@@ -8,31 +8,31 @@ import org.bukkit.entity.Player;
 
 import dev.nukecraft5419.gamecore.GameCore;
 
-public class AdvancedPlayerManager {
+public class GamePlayerManager {
     private GameCore plugin;
 
-    private Map<Player, AdvancedPlayer> players;
+    private Map<Player, GamePlayer> players;
 
-    public AdvancedPlayerManager(GameCore plugin) {
+    public GamePlayerManager(GameCore plugin) {
         this.plugin = plugin;
         this.players = new HashMap<>();
     }
 
-    public AdvancedPlayer addPlayer(Player bukkitPlayer) {
-        AdvancedPlayer player = new AdvancedPlayer(this.plugin, bukkitPlayer);
+    public GamePlayer addPlayer(Player bukkitPlayer) {
+        GamePlayer player = new GamePlayer(this.plugin, bukkitPlayer);
         this.players.put(bukkitPlayer, player);
         return player;
     }
 
-    public AdvancedPlayer removePlayer(Player bukkitPlayer) {
+    public GamePlayer removePlayer(Player bukkitPlayer) {
         return this.players.remove(bukkitPlayer);
     }
 
-    public AdvancedPlayer getPlayer(Player bukkitPlayer) {
+    public GamePlayer getPlayer(Player bukkitPlayer) {
         return this.players.get(bukkitPlayer);
     }
 
-    public AdvancedPlayer getPlayer(String name) {
+    public GamePlayer getPlayer(String name) {
         Player bukkitPlayer = this.plugin.getServer().getPlayerExact(name);
         if (bukkitPlayer != null && bukkitPlayer.isOnline()) {
             return this.getPlayer(bukkitPlayer);
@@ -41,7 +41,7 @@ public class AdvancedPlayerManager {
         }
     }
 
-    public Collection<AdvancedPlayer> getPlayers() {
+    public Collection<GamePlayer> getPlayers() {
         return this.players.values();
     }
 

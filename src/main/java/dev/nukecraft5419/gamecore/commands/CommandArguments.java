@@ -15,7 +15,7 @@ import dev.nukecraft5419.gamecore.errors.MaterialNotFoundException;
 import dev.nukecraft5419.gamecore.errors.PlayerOfflineException;
 import dev.nukecraft5419.gamecore.errors.SoundNotFoundException;
 import dev.nukecraft5419.gamecore.errors.WorldNotFoundException;
-import dev.nukecraft5419.gamecore.players.AdvancedPlayer;
+import dev.nukecraft5419.gamecore.players.GamePlayer;
 import dev.nukecraft5419.gamecore.players.OfflinePlayer;
 import dev.nukecraft5419.gamecore.utils.BukkitUtils;
 
@@ -53,10 +53,10 @@ public class CommandArguments {
         return (boolean) this.arguments.get(index);
     }
 
-    public AdvancedPlayer getPlayer(int index) {
+    public GamePlayer getPlayer(int index) {
         if (!this.hasIndex(index))
             return null;
-        return (AdvancedPlayer) this.arguments.get(index);
+        return (GamePlayer) this.arguments.get(index);
     }
 
     public Material getMaterial(int index) {

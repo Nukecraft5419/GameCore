@@ -17,10 +17,10 @@ import lib__net.md_5.bungee.chat.ComponentSerializer;
 
 import me.clip.placeholderapi.PlaceholderAPI;
 
-public class AdvancedPlayer extends CommandExecutor {
+public class GamePlayer extends CommandExecutor {
     private Player bukkitPlayer;
 
-    public AdvancedPlayer(GameCore plugin, Player bukkitPlayer) {
+    public GamePlayer(GameCore plugin, Player bukkitPlayer) {
         super(plugin, bukkitPlayer);
         this.bukkitPlayer = bukkitPlayer;
     }
