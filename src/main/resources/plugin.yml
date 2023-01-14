@@ -1,0 +1,12 @@
+name: ${name}
+description: ${description}
+author: ${author}
+version: ${version}
+url: ${url}
+main: dev.nukecraft5419.advancedexampleplugin.AdvancedExamplePlugin
+api: "1.13"
+api-version: "1.13"
+softdepend: [PlaceholderAPI]
+commands:
+  hello:
+    description: "Main test command"

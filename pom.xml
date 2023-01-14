@@ -1,0 +1,114 @@
+<project>
+    <modelVersion>4.0.0</modelVersion>
+
+    <!--| Project information |-->
+    <groupId>dev.nukecraft5419</groupId>
+    <artifactId>AdvancedExamplePlugin</artifactId>
+    <packaging>jar</packaging>
+
+
+    <!--| Plugin Information |-->
+    <name>AdvancedExamplePlugin</name>
+    <description>An advanced bukkit plugin boilerplate</description>
+    <version>0.0.1</version>
+    <url>https://github.com/Nukecraft5419/AdvancedExamplePlugin</url>
+
+
+    <!--| Project Properties |-->
+    <properties>
+        <author>Nukecraft5419</author>
+        <java.version>17</java.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <!--| External repositories |-->
+    <repositories>
+        <repository>
+            <id>spigot-repo</id>
+            <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
+        </repository>
+        <repository>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
+        </repository>
+        <repository>
+            <id>placeholderapi</id>
+            <url>https://repo.extendedclip.com/content/repositories/placeholderapi/</url>
+        </repository>
+    </repositories>
+
+    <!--| Dependencies imports |-->
+    <dependencies>
+
+        <!-- Develpoment dependencies -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.22</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.github.Nukecraft5419</groupId>
+            <artifactId>AdvancedColorAPI</artifactId>
+            <version>35558c8964</version>
+        </dependency>
+
+        <!-- Spigot/Bukkit API -->
+        <dependency>
+            <groupId>org.spigotmc</groupId>
+            <artifactId>spigot-api</artifactId>
+            <version>1.19-R0.1-SNAPSHOT</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <!-- Plugin soft-dependencies -->
+        <dependency>
+            <groupId>me.clip</groupId>
+            <artifactId>placeholderapi</artifactId>
+            <version>2.11.1</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+
+    <!--| Build settings |-->
+    <build>
+
+        <!--| Name of your compiled artifact |-->
+        <finalName>${artifactId}</finalName>
+
+        <!--| Directory of .java files |-->
+        <sourceDirectory>src/main/java</sourceDirectory>
+
+        <!-- Clean old builds and install dependencies before compile |-->
+        <defaultGoal>clean install</defaultGoal>
+
+        <!--| Package files inside resource directory in to the jar |-->
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+                <includes>
+                    <include>plugin.yml</include>
+                </includes>
+            </resource>
+            <resource>
+                <directory>src/main/resources</directory>
+                <excludes>
+                    <exclude>plugin.yml</exclude>
+                </excludes>
+            </resource>
+        </resources>
+
+        <!--| Compilation settings starts here |-->
+        <plugins>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.10.1</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
