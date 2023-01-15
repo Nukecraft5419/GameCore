@@ -1,2 +1,105 @@
+#╔══════════════╗
+#║ ● GameCore ● ║
+#╚══════════════╝
+
+# Welcome to the configuration settings of my plugin,
+# before continuing, if you wish, I leave here some very useful links
+# links to get more information or ask for support or even evaluate my plugin
+
+# Discord ● https://discord.com/invite/cpeNQzehvh
+# Polymart ● https://polymart.org/resource/gamecore.2466
+
+# Variables that can be used
+# The name of the player = %player%
+
+# Minecraft or Hex Colours
+
+# Color Code
+# &0 Changes text to Black
+# &1 Changes text to Dark Blue
+# &2 Changes text to Dark Green
+# &3 Changes text to Dark Aqua
+# &4 Changes text to Dark Red
+# &5 Changes text to Dark Purple
+# &6 Changes text to Gold
+# &7 Changes text to Gray
+# &8 Changes text to Dark Gray
+# &9 Changes text to Blue
+# &a Changes text to Green
+# &b Changes text to Aqua
+# &c Changes text to Red
+# &d Changes text to Light Purple
+# &e Changes text to Yellow
+# &f Changes text to White
+
+# Format Code
+# &k Change Text to Obfuscated
+# &l Change Text to Bold
+# &m Change Text to Strikethrough
+# &n Change Text to Underline
+# &o Change Text to Italic
+# &r Change Text to Reset to the default
+
+# Or you can use these colours for your strings
+
+# Rainbow1 = <RAINBOW1> TEXT </RAINBOW>
+# Rainbow100 = <RAINBOW100> TEXT </RAINBOW>
+# Gradient = <GRADIENT:2C08BA> TEXT </GRADIENT::028A97>
+# Solid = <SOLID:2C08BA> TEXT
+
+# To choose a colour combination you can use sites such as
+# https://coolors.co/
+
 settings:
   default-lang: "en"
+
+#╔══════════════════════╗
+#║ ● Welcome Messages ● ║
+#╚══════════════════════╝
+
+# Sets the messages that are shown to players when they join the server.
+welcome-messages:
+  # Activate this function.
+  # Default: true
+  enabled: true
+
+  # Customisation of incoming and outgoing messages
+  join-msg: "&8&l(&a&l+&8&l)&r &a%player% &7has joined the server!"
+  quit-msg: "&8&l(&4&l-&8&l)&r &a%player% &7has left the server!"
+
+  # Activate this function.
+  # Default: true
+  first-join: true
+
+  # Customising the first entry message on the server
+  announce-msg: "&8&l(&a&l!&8&l)&r <SOLID:67b99a>Welcome to this server &a%player%"
+
+#╔═══════════════════╗
+#║ ● Welcome Title ● ║
+#╚═══════════════════╝
+
+# Sets the title and subtitle that is shown to the player when they join the server.
+welcome-title:
+  # The title shown.
+  title: "<GRADIENT:38b000>&aWelcome Title</GRADIENT:9ef01a>"
+
+  # The subtitle shown.
+  subtitle: "<GRADIENT:2C08BA>Welcome subTitle %player%</GRADIENT:028A97>"
+
+  # Title and subtitle parameters
+  parameters:
+    # Show title and subtitle.
+    # Default: true
+    enabled: true
+
+    # The time it takes for the title and subtitle to fade out remains on the screen. (In ticks)
+    # Default: 20
+    fade-in: 20
+
+    # The time it takes for the title and subtitle to remain on the screen. (In ticks)
+    # Default: 40
+    stay: 40
+
+    # The time it takes for the title and subtitle to fade out on the screen. (In ticks)
+    # Default: 20
+    fade-out: 20
