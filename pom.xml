@@ -50,7 +50,7 @@
         <dependency>
             <groupId>com.github.Nukecraft5419</groupId>
             <artifactId>AdvancedColorAPI</artifactId>
-            <version>35558c8964</version>
+            <version>7aade78282</version>
         </dependency>
 
         <!-- Spigot/Bukkit API -->
